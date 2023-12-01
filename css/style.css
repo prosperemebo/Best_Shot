@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  background-color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.heading-primary {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+.heading-secondary {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  border-radius: 1.2rem;
+  font-size: 2.2rem;
+  text-decoration: none;
+  color: #fff;
+  transition: transform .2s ease;
+}
+
+.btn-tertiary {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem 1.8rem;
+}
+
+.btn-accent {
+  background-color: #F0F241;
+  padding: 1rem 7rem;
+  color: #000;
+}
+
+.btn img {
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+  display: block;
+}
+
+.btn:hover {
+  transform: scale(1.04);
+}
+
+.navigation {
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation .logo {
+  width: 12rem;
+}
+
+.navigation .logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.navigation .nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navigation .nav-list li {
+  list-style: none;
+}
+
+.header {
+  background-image: linear-gradient(#000 -15%, rgba(0, 0, 0, 0.00) 50%, #000 100%), url('/assets/images/hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header .textbox {
+  padding: 10rem 5rem;
+  max-width: 70rem;
+}
+
+.header .textbox .infos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.header .textbox .infos .info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.8rem;
+  color: #FFF;
+  font-weight: 600;
+}
+
+.header .textbox .infos .info img {
+  display: inline-block;
+  height: 3rem;
+  width: 3rem;
+  object-fit: contain;
+}
+
+.header .textbox .actions {
+  display: flex;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+section.destinations {
+  padding: 5rem;
+}
+
+section.destinations .destinations {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(40rem,1fr));
+  grid-auto-rows: 30rem;
+  grid-gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+section.destinations .destinations .destination {
+   width: 100%;
+   height: 100%;
+   border-radius: 2rem;
+   overflow: hidden;
+   position: relative;
+}
+
+section.destinations .destinations .destination img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section.destinations .destinations .destination::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 70%, #000 110%);
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: 1;
+}
+
+section.destinations .destinations .destination figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+  padding: 1.5rem;
+}
+
+section.destinations .destinations .destination figcaption h3 {
+  color: #FFF;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: .5rem;
+}
+
+section.destinations .destinations .destination figcaption .infos {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+section.destinations .destinations .destination figcaption .infos .info {
+  display: flex;
+  align-items: center;
+  gap: .2rem;
+  font-size: 1.6rem;
+  color: #FFF;
+  font-weight: 600;
+}
+
+section.destinations .destinations .destination figcaption .infos .info img {
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  object-fit: contain;
+}
